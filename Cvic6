@@ -1,0 +1,16 @@
+try:
+    u = input("Zadejte napětí (U) nebo leave prázdné: ")
+    i = input("Zadejte proud (I) nebo leave prázdné: ")
+    r = input("Zadejte odpor (R) nebo leave prázdné: ")
+    u = int(u) if u else None
+    i = int(i) if i else None
+    r = int(r) if r else None
+    if u is None:
+        print("napeti je:" + r*i)
+    if i is None:
+        raise NotImplementedError
+    if r is None:
+        raise NotImplementedError
+
+except NotImplementedError:
+    print("no value selected ")
