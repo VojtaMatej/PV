@@ -1,16 +1,27 @@
 try:
-    u = input("Zadejte napětí (U) nebo leave prázdné: ")
-    i = input("Zadejte proud (I) nebo leave prázdné: ")
-    r = input("Zadejte odpor (R) nebo leave prázdné: ")
-    u = int(u) if u else None
-    i = int(i) if i else None
-    r = int(r) if r else None
-    if u is None:
-        print("napeti je:" + str(r*i))
-    if i is None:
-        raise NotImplementedError
-    if r is None:
-        raise NotImplementedError
+    while True:
+        u = input("Zadejte napětí (U) nebo leave prázdné: ")
+        i = input("Zadejte proud (I) nebo leave prázdné: ")
+        r = input("Zadejte odpor (R) nebo leave prázdné: ")
+        if not u.isnumeric() or not i.isnumeric() or not r.isnumeric():
+            raise ValueError
+            break
+        else:
+            u = int(u) if u else None
+            i = int(i) if i else None
+            r = int(r) if r else None
+            if u is None and i  and r :
+                print("napeti je:" + str(r*i))
+                break
+            if i is None and u  and r:
+                raise NotImplementedError
+                break
+            if r is None and i  and u:
+                raise NotImplementedError
+                break
+            if u and i and r:
+                raise NotImplementedError
+                break
 
 except NotImplementedError:
     print("no value selected ")
