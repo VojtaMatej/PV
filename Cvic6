@@ -6,7 +6,7 @@ try:
     i = int(i) if i else None
     r = int(r) if r else None
     if u is None:
-        print("napeti je:" + r*i)
+        print("napeti je:" + str(r*i))
     if i is None:
         raise NotImplementedError
     if r is None:
