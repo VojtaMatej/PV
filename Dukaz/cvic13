@@ -1,0 +1,22 @@
+mythump = (5.5,"apple", 3,5,"banana", "cherry" , 5 , 6,None )
+print(mythump[2])
+print("-----------------")
+mylist = [5.5,"apple", 5,3,"banana", "Lelda" , 5 , 6 ]
+print(mylist[2])
+print("-----------------")
+myset = {5.5,"apple", 3,7,"banana", "cherry" , 5 , 6,None }
+
+print(dir(myset)) #only by if
+
+print("-----------------")
+myDict = {"Karel" : 1, "Pepa" : 2, "jenda" : 1.4, "Lojza" : None, "Jenda" : 5}
+
+print(dir(myDict)) # only by number
+
+
+
+print("-----------------")
+mystring = "AHojKarle AHojKarle"
+
+print(mystring[6]) #by indexing not methods 
+
