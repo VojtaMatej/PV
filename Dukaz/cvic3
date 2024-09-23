@@ -15,6 +15,7 @@ print("-----------------")
 myDict = {"Karel" : 1, "Pepa" : 2, "jenda" : 1.4}
 
 #print(myDict[1])
+#print(myDict["Karel"])
 print("-----------------")
 mystring = "AHojKarle"
 
