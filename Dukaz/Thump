@@ -1,16 +1,20 @@
 mythump = ("apple", "banana", "cherry" , 5 , 6)
-
+print("Tuple:")
 print(mythump)
 
 print("----------------")
 mylist = ["apple", "banana", "cherry", 54, 9,9.5 ]
+print("List")
 print(mylist)
 print("-----------------")
 myset = {"apple", "banana", "cherry",1,2,9,9.5 }
+print("set:")
 print(myset)
 print("-----------------")
 myDict = {"Karel" : 1, "Pepa" : 2, "jenda" : 1.4}
+print("Dict")
 print(myDict)
 print("-----------------")
 mystring = "AHojKarle"
+print("String")
 print(mystring)
