@@ -1,0 +1,81 @@
+from logging import raiseExceptions
+from operator import truediv
+from tkinter.constants import RAISED
+
+
+class Bottle:
+    def __init__(self, litre,open):
+        """
+        Create bottle of capacity
+
+        :param capacity = litre:
+
+        """
+        if type(litre) != float:
+            raise Exception("the capacity is not in float")
+        if litre < 0:
+            raise Exception("the bottle has capacity less than 0")
+        if litre > 10:
+            raise Exception("the bottle has to big capacity")
+        self.litre = litre
+        self.volume = 0
+        self.open = open
+
+    def __str__(self):
+        return f" litre:{self.litre}  volume:{self.volume} open:{self.open}"
+
+
+    def control_of_capacity(self, capacity):
+        if self.litre < capacity:
+            return True
+        else:
+            return False
+
+
+    def put_in_volume(self, volume):
+        """
+               Method that allows youser to put in volume and checks if its open or closed
+               and if its the volume is bigger than the capacity of the bottle
+               :param kapacity = litres:
+        """
+        if self.control_of_capacity( volume) and self.open:
+            self.volume = volume
+            return self
+        else:
+           raise Exception("lahev nelze napustit nebo je jeji objem moc maly")
+
+
+    def spill(self):
+        """
+            Method that makes volume of the bottle 0 and again check if its open or not
+
+         """
+        if(self.open):
+            self.volume = 0
+            return self
+        else:
+            raise Exception("Flaska je zavrena")
+
+    def mili(self, volume):
+        """
+         Method that makes volume of the bottle in mililitres and again check if its open or not
+         and checks if the volume is bigger than the capacity of the bottle or its to small
+         :param volume = litres:
+
+
+         """
+        if(self.open):
+            volume = volume * 1000
+            put = put_in_volume(volume)
+            if (self.litre < self.volume):
+                raise Exception("lahev nelze napustit nebo je jeji objem moc maly")
+            else:
+                return self
+        else:
+            raise Exception("lahev nelze napustit nebo je jeji objem moc maly")
+
+lahev = Bottle(5.0,True)
+print(lahev.put_in_volume(5))
+
+print(lahev.mili(3))
+print(lahev.spill())
