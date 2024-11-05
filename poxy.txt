@@ -1,0 +1,1 @@
+vypnuti proxy: nastaveni,vyhledat proxy a vypnout proxy
