@@ -1,0 +1,48 @@
+
+def Resistance(power,amper):
+        """
+        this returns the resistance of the ohm
+        param power: float
+        param amper: float
+        """
+
+        if power < 0 or amper < 0 and power != float and amper != float:
+            raise Exception("spatne hodnoty")
+        else:
+
+            return amper/power
+
+def Power(resitance,amper):
+        """
+        this returns the power of the ohm
+        param amper: float
+        param resitance: float
+        """
+        if resitance < 0 or amper < 0 and resitance != float and amper != float:
+                raise Exception("spatne hodnoty")
+        else:
+            return amper*resitance
+
+def Amper(power, resitance):
+        """
+        this returns the intensivity of the ohm
+        param power: float
+        param resitance: float
+        """
+        if power < 0 or resitance < 0 and power != float and resitance != float:
+            raise Exception("spatne hodnoty")
+        else:
+            return power/resitance
+
+def Columbo(q1,q2,r,epsilon_r):
+    """
+
+    :param q1: float
+    :param q2: float
+    :param r: float
+    :param epsilon_r: float
+    :return: Newton
+    """
+    epsilon_0 = 0.00000000000885
+    epsilon = epsilon_0 * epsilon_r
+    return (1 / (4 * 3.14 * epsilon)) * abs(q1 * q2) / (r ** 2)
